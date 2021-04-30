@@ -1,0 +1,22 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  http1:
+    image: httpd:alpine
+    ports:
+      - "9090:80"
+  ecomm:
+    image: raman7docker/ecomm
+    ports:
+      - "8080:80"
+  nodeapp:
+    image: raman7docker/nodeapp
+    ports:
+      - "8090:8080"
+  http2:
+    image: nginx
+    ports:
+      - "9080:80"
+  food:
+    image: raman7docker/food
+    ports:
+      - "8081:80"
